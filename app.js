@@ -47,7 +47,7 @@ passport.use(new GoogleStrategy({
     passport.authenticate('google', { scope: ['profile', 'email'] })
   );
   
-  app.get('/auth/google/callback',
+  app.get('/auth/google/callback', 
     passport.authenticate('google', { failureRedirect: '/' }),
     (req, res) => {
       res.redirect('/profile');
