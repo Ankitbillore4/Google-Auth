@@ -58,7 +58,6 @@ passport.use(new GoogleStrategy({
     res.send(`<h1>Profile</h1><pre>${JSON.stringify(req.user, null, 2)}</pre>`);
   });
 
-
   app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
   });
